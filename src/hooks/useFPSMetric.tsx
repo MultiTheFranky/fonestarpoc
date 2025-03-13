@@ -36,7 +36,7 @@ export function useFPSMetric(): FPS {
           const totalCount = frameState.totalCount + 1;
           // I use math.min here because values over 60 aren't really important
           // I calculate the mean fps incrementatally here instead of storing all the values
-          const newMean = Math.min(frameState.average + (newValue - frameState.average) / totalCount, 60);
+          const newMean = frameState.average + (newValue - frameState.average) / totalCount;
           setFrameState({
             fps: frameState.framesCount,
             lastStamp: currentStamp,
