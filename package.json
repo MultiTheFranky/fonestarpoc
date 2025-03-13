@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "windows": "npx @react-native-community/cli run-windows"
+    "windows": "npx @react-native-community/cli run-windows",
+    "test:windows": "jest --config jest.config.windows.js"
   },
   "dependencies": {
     "react": "19.0.0",
@@ -37,7 +38,8 @@
     "metro-config": "^0.81.3",
     "prettier": "2.8.8",
     "react-test-renderer": "19.0.0",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "@rnx-kit/jest-preset": "^0.1.17"
   },
   "engines": {
     "node": ">=18"
@@ -46,7 +48,7 @@
     "init-windows": {
       "name": "fonestarpoc",
       "namespace": "fonestarpoc",
-      "template": "old/uwp-cpp-app"
+      "template": "cpp-app"
     }
   }
 }
